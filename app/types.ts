@@ -1,10 +1,11 @@
-import THREE from 'three'
+import { LoaderProto } from '@react-three/fiber'
+import THREE, { Vector3 } from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-export interface IRotationController{
-  startRotating() : void
-  stopRotating() : void
-  changeDirection() : void
+export interface IRotationController {
+  startRotating(): void
+  stopRotating(): void
+  changeDirection(): void
 }
 
 export interface ISceneProperties {
@@ -14,6 +15,17 @@ export interface ISceneProperties {
   renderer: THREE.WebGLRenderer
   orbitControls: OrbitControls
   sceneMeshes: THREE.Object3D[]
+}
+
+export interface ILoadModelProperties {
+  loaderType: LoaderProto<unknown>
+  path: string;
+  initialScale: Vector3;
+  initialPosition: Vector3;
+  initialRotation: Vector3;
+  castShadow: boolean;
+  receiveShadow: boolean;
+  envMapIntensity: number;
 }
 
 // PROPS

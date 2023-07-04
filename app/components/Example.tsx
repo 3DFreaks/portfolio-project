@@ -1,23 +1,11 @@
 import React from "react";
-import { ILoadModelConfig, LoadModel } from '../loaders/gltfLoader'
-import { Vector3 } from "three";
+import { LoadModel } from '../loaders/genericModelLoader'
+import { ILoadModelProperties } from "../types";
 
-export function Example(): React.JSX.Element {
-    let identityVector = new Vector3(1, 1, 1);
-    let zeroVector = new Vector3(0, 0, 0);
 
-    const config: ILoadModelConfig = {
-        path: `./models/${Example.name.toLowerCase()}/scene.gltf`,
-        initialScale: identityVector,
-        initialPosition: zeroVector,
-        initialRotation: zeroVector,
-        castShadow: true,
-        receiveShadow: true,
-        envMapIntensity: 20
-    }
-
+export function Example(props: ILoadModelProperties): React.JSX.Element {
     return (
-        LoadModel(config)
+        LoadModel(props)
     );
 }
 
