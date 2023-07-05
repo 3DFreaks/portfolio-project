@@ -8,6 +8,8 @@ export interface IRotationController {
   changeDirection(): void
 }
 
+export enum ModelType { Gltf = 'gltf', Glb = 'glb', None='none' }
+
 export interface ISceneProperties {
   scene: THREE.Scene
   light: THREE.Light
@@ -18,8 +20,11 @@ export interface ISceneProperties {
 }
 
 export interface ILoadModelProperties {
-  loaderType: LoaderProto<unknown>
-  path: string;
+  name: string,
+  type: ModelType,
+}
+
+export interface IModelProperties {
   initialScale: Vector3;
   initialPosition: Vector3;
   initialRotation: Vector3;
