@@ -8,7 +8,7 @@ export interface IRotationController {
   changeDirection(): void
 }
 
-export enum ModelType { Gltf = 'gltf', Glb = 'glb', None='none' }
+export enum ModelType { Gltf = 'gltf', Glb = 'glb', Obj='obj' }
 
 export interface ISceneProperties {
   scene: THREE.Scene
@@ -21,7 +21,7 @@ export interface ISceneProperties {
 
 export interface ILoadModelProperties {
   name: string,
-  type: ModelType,
+  type?: ModelType,
 }
 
 export interface IModelProperties {

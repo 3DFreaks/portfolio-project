@@ -1,5 +1,4 @@
 import { Canvas } from "@react-three/fiber";
-import { Box } from "./Box";
 import { FC } from "react";
 import { CameraController } from "../controllers/CameraController";
 import { GltfModel } from "./GltfModel";

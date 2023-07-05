@@ -1,10 +1,10 @@
 import React from "react";
 import { LoadObjModel } from '../loaders/genericModelLoader'
-import { ModelType } from "../types";
+import { ILoadModelProperties, ModelType } from "../types";
 
-export function ObjModel(name: string, type: ModelType): React.JSX.Element {
+export function ObjModel(props: ILoadModelProperties): React.JSX.Element {
     return (
-        LoadObjModel(name, type)
+        LoadObjModel(props.name, ModelType.Obj)
     );
 }
 
