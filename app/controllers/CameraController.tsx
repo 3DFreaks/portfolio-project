@@ -9,6 +9,7 @@ export const CameraController = () => {
 
   useFrame(()=> {
     controls.update()
+    gl.setSize(window.innerWidth, window.innerHeight)
   })
 
   useEffect(() => {
